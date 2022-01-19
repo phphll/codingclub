@@ -34,7 +34,11 @@
             margin-left: 5px;
         }
     </style>
+    <script>
+        function a(){
 
+        }
+    </script>
 </head>
 
 <body>
@@ -42,13 +46,13 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR72_6Xq1w7pTPkVhW7B7sjyIihTIWeCYnIhcSvliZEwWYO6EQLoSTJItRzMLHc0LsgmkK4m9hQOg&usqp=CAc" alt="First slide">
+      <img class="d-block w-100" src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR72_6Xq1w7pTPkVhW7B7sjyIihTIWeCYnIhcSvliZEwWYO6EQLoSTJItRzMLHc0LsgmkK4m9hQOg&usqp=CAc" onclick="location.href='https://www.wizwid.com/CSW/handler/wizwid/kr/MallProduct-Start?AssortID=706451741&gclid=Cj0KCQiAip-PBhDVARIsAPP2xc3gYoW4_20e9VmIMMN2nX0fp2xjN_PmwjAGxLF1BjYKBhslV3GtH6IaAu1XEALw_wcB';" style="cursor:pointer;"  alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS_pFstIyQgqI-8hGjEiSitS79LEUOag2eh1A2Q-_fXJorIePjDaQFVX2gWaQ8Fmwjy29BaPT6J-t17RBGNPAPnyyDNX7prwVB7cNTnoCy1CBjjKQi02EgZdA&usqp=CAc" alt="Second slide">
+      <img class="d-block w-100" src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS_pFstIyQgqI-8hGjEiSitS79LEUOag2eh1A2Q-_fXJorIePjDaQFVX2gWaQ8Fmwjy29BaPT6J-t17RBGNPAPnyyDNX7prwVB7cNTnoCy1CBjjKQi02EgZdA&usqp=CAc"onclick="location.href='https://www.gucci.com/kr/ko/pr/men/bags-for-men/backpacks-for-men/gg-embossed-backpack-p-6585791W3BN9099?utm_source=naver_kr&utm_medium=cpc&utm_campaign=bags-for-men_shopping&gclid=Cj0KCQiAip-PBhDVARIsAPP2xc2RkBSKT7uB3BwD0IIwUDnWwESKm3cfztG7S61J6L-N5LSqzCWtaxEaAlFOEALw_wcB';" style="cursor:pointer;" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTu3Fgi37IxKy8LFdCpC637EITwu-RGDERzv9fy11PZjeoFElFhJxY201uMgMeJo1dfJVcjP___8XvKjlqr4hVld_aBJ_4Cn6UbYVbI2PTRD-KcFUdS0Qnm&usqp=CAc" alt="Third slide">
+      <img class="d-block w-100" src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTu3Fgi37IxKy8LFdCpC637EITwu-RGDERzv9fy11PZjeoFElFhJxY201uMgMeJo1dfJVcjP___8XvKjlqr4hVld_aBJ_4Cn6UbYVbI2PTRD-KcFUdS0Qnm&usqp=CAc" onclick="location.href='https://www.gucci.com/kr/ko/pr/men/bags-for-men/backpacks-for-men/gg-embossed-backpack-p-6585791W3BN1000?utm_source=naver_kr&utm_medium=cpc&utm_campaign=bags-for-men_shopping&gclid=Cj0KCQiAip-PBhDVARIsAPP2xc29flf3CTu4hGQTrj4TzaJdOUaiciXAeo2d7YHSKUR8z0QR5DGaIcMaAshPEALw_wcB';" style="cursor:pointer;" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -60,7 +64,7 @@
     <span class="sr-only">Next</span>
   </a>
     <h1>New alive <span class="badge badge-secondary">New</span></h1>
-    <h5> 할 말이 없지만 그냥 팔아요 그냥 사세요 제발 그냥 사세요 ㅠ.ㅠ</h5>
+    <h5> 위에 사진 누르면 상품 페이지로 갑니다요~</h5>
     <div class="input-group mb-3">
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-default">주문자 이름</span>
@@ -68,12 +72,17 @@
   <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
 </div>
     <div class="input-group mb-3">
+  <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-default">수량</span>
+    <label class="input-group-text" for="inputGroupSelect01">수량</label>
   </div>
-  <input type="button" class="btn btn-secondary dropdown-toggle" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>...Selet...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
 </div>
-    <div class="input-group mb-3">
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-default">전화번호</span>
   </div>
