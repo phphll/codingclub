@@ -1,0 +1,41 @@
+div{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    background-color: blueviolet;
+}
+.container{
+    background-color: greenyellow;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+.box{
+    background-color: purple;
+    position: relative;
+    left: 20px;
+    top: 20px;
+    /* 기존의 자리에서 20px씩 이동함 */
+}
+.box1{
+    background-color: rebeccapurple;
+    position:absolute;
+    left: 20px;
+    top: 20px;
+    /* 기존의 자리가 아닌 부모의 (0,0)에서 시작하여 이동함 */
+}
+.box2{
+    background-color: hotpink;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    /* pixed는 부모와 관계없이 홈페이지 시작하는 곳에서(0,0)에서 시작됨 */
+}
+.box3{
+    background-color: orange;
+    position: sticky;
+    top: 30px;
+    left: 30px;
+    /* sticky는 fixed와 달리 (0,0)에서 시작이  */
+    /* 아닌 그자리에서 시작하여 아래로 이동할 시 fixed화 됨 */
+}
