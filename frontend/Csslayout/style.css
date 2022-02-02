@@ -1,4 +1,4 @@
-div,span{
+div,span,p{
     width: 80px;
     height: 80px;
     margin: 20px;
@@ -10,4 +10,8 @@ div{
 span{
      background-color: blue;
      display: block;
+}
+p{
+    background-color: green;
+    display: inline;
 }
