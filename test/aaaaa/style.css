@@ -1,0 +1,58 @@
+.toogleBtn{
+	display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+}
+.abc{
+    position: relative;
+    display: ;
+}
+.menu {
+    display: flex;
+    list-style: none;
+    position: relative;
+    left: 410px;
+}
+.menu li{
+	padding: 8px 80px;
+    font-size: 18px;
+    font-weight: bold;
+	
+}
+.navbar{
+	display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: white;
+	height:110px;
+	margin : 0 !important;
+    flex-direction: row;
+    
+}
+.navbar-logo{
+	width:233px;
+	position: relative;
+    left:50px;
+}
+body > form.page .header-content-wrapper > main.container > .main-content-wrapper {
+    width: 100%;
+	
+}
+.main-content-wrapper{
+margin:0;
+padding:0;
+width:100%;
+height:110px;
+}
+div.navbar-default{display:none;}
+
+@media screen and (max-width:1010px){
+	.navbar{
+        
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+	
+}
