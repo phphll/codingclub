@@ -16,22 +16,19 @@ def write_review():
     title_receive = request.form['title_give']
     author_receive = request.form['author_give']
     review_receive = request.form['review_give']
-
-    doc = {
+    doc ={
         'title':title_receive,
         'author':author_receive,
         'review':review_receive
     }
     db.bookreview.insert_one(doc)
-
-    return jsonify({'msg': '저장완료!'})
+    return jsonify({'msg': '저장 완료!!'})
 
 
 @app.route('/review', methods=['GET'])
 def read_reviews():
-    sample_receive = request.args.get('sample_give')
-    print(sample_receive)
-    return jsonify({'msg': '이 요청은 GET!'})
+    reviews = list(db.bookreview.find({}, {'_id': False}))
+    return jsonify({'all_reviews': reviews})
 
 
 if __name__ == '__main__':
