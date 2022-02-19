@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons%7CMaterial+Icons+Sharp%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Outlined"
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Sharp|Material+Icons+Two+Tone|Material+Icons+Outlined"
           rel="stylesheet">
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -72,22 +72,6 @@
             margin-bottom: 10px;
         }
 
-        .table-bordered {
-            margin-top: 30px;
-        }
-
-        .back {
-            width: 500px;
-            height: 300px;
-            display: block;
-            margin: 100px auto 0 auto;
-        }
-
-        .carousel-control-next-icon, .carousel-control-prev-icon {
-            width: 40px;
-            height: 40px;
-
-        }
 
     </style>
     <script>
@@ -102,25 +86,9 @@
                 url: "/order",
                 data: {},
                 success: function (response) {
-                    if (response["result"] == "success") {
+                    if (response["result"] == "success")
                         let orders = response["orders"];
-                        for (let i = 0; i < orders.length; i++) {
-                            let name = orders[i]['name'];
-                            let count = orders[i]['count'];
-                            let phone = orders[i]['phone'];
-                            let address = orders[i]['address'];
-
-
-                            let temp_html = `<tr>
-                                                <th scope="row">${name}</th>
-                                                <td>${count}</td>
-                                                <td>${phone}</td>
-                                                <td>${address}</td>
-                                            </tr>`
-                            $('#orders_box').append(temp_html)
-
-                        }
-                    }
+                        console.log(orders)
                 }
             })
         }
@@ -151,7 +119,7 @@
             $.ajax({
                 type: "POST",
                 url: "/order",
-                data: {name_give: name, count_give: count, address_give: address, phone_give: phone},
+                data: {name_give: name, count_give: count, adress_give: address, phone_give: phone},
                 success: function (response) {
                     if (response["result"] == "success")
                         alert(response["msg"]);
@@ -232,28 +200,15 @@
         </div>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <span class="input-group-text">주소</span>
+                <span class="input-group-text" id="order_address">주소</span>
             </div>
-            <input id="order_address" type="text" class="form-control" aria-label="Default"
-                   aria-describedby="inputGroup-sizing-default">
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
 
         </div>
         <button type="button" onclick="order()" class="btn btn-primary btn-order">주문하기</button>
 
 
     </div>
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-            <th scope="col">이름</th>
-            <th scope="col">수량</th>
-            <th scope="col">전화번호</th>
-            <th scope="col">주소</th>
-        </tr>
-        </thead>
-        <tbody id="orders_box">
-
-        </tbody>
-    </table>
 </div>
 </body>
+
