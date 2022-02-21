@@ -1,9 +1,7 @@
 from flask import Flask, render_template, jsonify, request
 app = Flask(__name__)
 from pymongo import MongoClient
-
-client = MongoClient('mongodb://test:test@localhost', 27017) # 몽고디비 아이디 패스워드 입력해서 올리기
-# client = MongoClient('localhost', 27017) #기존의 몽고디비 연결
+client = MongoClient('localhost', 27017)
 db = client.dbhomework
 ## HTML 화면 보여주기
 @app.route('/')
